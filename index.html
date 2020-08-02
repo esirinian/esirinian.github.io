@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <h4 class="navbar-brand">Narrative Visualization</h4>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="vis" class="vis">
+        <h1>The Novel Corona Virus in Our World</h1>
+        <p> This visualization seeks to expose meaningful hidden dynamics in the COVID-19 crisis and
+            extend the general understanding of the extent this crisis has affected our world.
+            The goal of this analysis is to garner a better understanding of this infectious disease. Having
+            never experienced something of this caliber in the last century, the pandemic has a vice-grip on the world;
+            bringing it to an almost screeching halt. With the volumes of data already analyzed and still no solid grasp
+            at how to effectively combat this without self-isolating for weeks at a time, we aim to uncover new insights
+            on affected populations around the world.
+        </p>
+        <p>
+            Our World in Data (OWID) collects publicly available information published by official sources on the novel
+            COVID-19 pandemic and wrangles it all together in a single data set. Updated regularly, the data OWID
+            provides covers most of the world with a majority of their data being no older than 1 week old. While there
+            is no official verification of the data, OWID does state that they highlight ambiguities or problems. The
+            data file describes the total number of cases and deaths for those who tested positive on COVID-19 by date
+            and country. There are also expectancy and prevalency data on sensitive populations who are generally
+            considered to be severely at-risk to complications and elevated mortality rates from COVID-19 (namely,
+            smokers, diabetics, and the elderly).
+        </p>
+        <p>Select an individual country to learn more or compare general metrics across the world</p>
+        <button id="comp-all-btn" class="btn btn-dark"></button>
+        <div id="map" class="map"></div>
+        <div id="map-tooltip" class="map-tooltip">
+            <div class="map-tooltip-country" id="country"></div>
+            <div class="map-tooltip-value">
+                <span id="value"></span> total deaths
+            </div>
+        </div>
+    </div>
+    <div id="comp" class="comp"></div>
+    <div id="detail" class="detial">
+    </div>
+
+    <script src="./d3.v5.js"></script>
+    <script src="./scripts/detail.js"></script>
+    <script src="./scripts/comp.js"></script>
+    <script src="./scripts/map.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
